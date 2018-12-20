@@ -1,14 +1,16 @@
 {
   "name": "starwars-names-learn",
-  "version": "1.2.0-beta.1",
+  "version": "0.0.0-development",
   "description": "get randomly starwars names",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz",
+    "test": "mocha src/index.test.js -w",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/miladr0/starwars-names.git"
+    "url": "https://github.com/miladr0/starwars-names.git"
   },
   "keywords": [
     "random",
@@ -24,5 +26,14 @@
   "homepage": "https://github.com/miladr0/starwars-names#readme",
   "dependencies": {
     "unique-random-array": "1.0.1"
+  },
+  "devDependencies": {
+    "chai": "3.2.0",
+    "commitizen": "3.0.5",
+    "cz-conventional-changelog": "2.1.0",
+    "mocha": "2.2.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
